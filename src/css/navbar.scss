@@ -38,10 +38,10 @@ $switch-bgdk-color: #603F83;
 // ------------------------SWITCH-----------------------------
     .nav__switch-btn {
         display: flex;
-        top: .15rem;
-        gap: .1rem;
-        padding: 0.1rem;
+        gap: .2rem;
         position: relative;
+        top: .15rem;
+        padding: 0.15rem;
         background-color: $switch-bgdk-color;
         color: white;
         border: none;
@@ -56,8 +56,8 @@ $switch-bgdk-color: #603F83;
             width: 1.3rem;
             height: 1.3rem;
             position: absolute;
-            top: 7%;
-            left: 6%;
+            top: 10%;
+            left: 9%;
             // right: unset;
             border-radius: 50%;
             background-color: white;
