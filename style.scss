@@ -40,8 +40,8 @@ body {
   flex-direction: column;
   position: relative;
   max-width: 1440px;
-  // height: 100vh;
   min-height: 0px;
+  // height: 100vh;
   // height: -webkit-fill-available;
   // overflow-x: hidden;
   // border: 5px solid blue ;
@@ -139,7 +139,8 @@ body {
   }
 
   #burguer-btn {
-    z-index: 9;
+    z-index: 1;
+    width: 2rem;
   }
 
 }
