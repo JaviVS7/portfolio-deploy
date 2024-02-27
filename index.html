@@ -29,7 +29,7 @@
             <div class="nav__item-group">
               <a href="cv.html" class="nav__item nav__item-hide">curriculum</a>
               <a href="portfolio.html" class="nav__item nav__item-hide">portfolio</a>
-              <a href="contact.html" class="nav__item">contact</a>
+              <a href="#footer" class="nav__item">contact</a>
               <button id="switch" class="nav__switch-btn">
                 <i class="fa-solid fa-sun"></i>
                 <i class="fa-solid fa-moon"></i>
@@ -98,19 +98,57 @@
 
     
       <!-- FOOTER -->
-      <footer class="layout__footer">
+      <footer class="layout__footer" id="footer">
+        <header class="footer__contact-form">
+          <h2 class="form__title">
+            /contact <span class="title__color">me</span>
+          </h2>
+        </header>
+      
+        <form class="contact__form">
+            <div class="form__group">
+              <input
+                type="text"
+                name="name"
+                class="form__input"
+                placeholder="Name"
+                required
+              />
+              <label for="name" class="form__label">Name</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="email"
+                name="email"
+                class="form__input"
+                placeholder="E-mail"
+                required
+              />
+              <label for="email" class="form__label">E-mail</label>
+            </div>     
+            <div class="form__group">
+              <textarea
+                name="message"
+                class="form__input form__input--textarea"
+                placeholder="Message"
+                required
+              ></textarea>
+              <label for="message" class="form__label">Message</label>
+            </div>
+            <input type="submit" value="Send" class="form__btn"/>        
+          </form>
+
+        <div class="footer__social">
+          <nav class="menu__social">
+            <a href="#"><i class="social__icon fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="social__icon fa-brands fa-github"></i></a>
+            <a href="#"><i class="social__icon fa-brands fa-telegram"></i></a>
+          </nav>          
+        </div>
+        
         <div class="footer__copy-right">
           <span style="font-weight: 600;">2024 @javi.codes</span>
         </div>
-        <!-- <div class="footer__social">
-        <nav class="menu__social">
-          <a href="#"><i class="social__icon fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="social__icon fa-brands fa-github"></i></a>
-          <a href="#"><i class="social__icon fa-brands fa-telegram"></i></a>
-        </nav>
-          
-          <a id="burguer-btn"><i class="social__icon fa fa-bars"></i></a>
-        </div> -->
       </footer>
 
       <!--MENU BAR-->
