@@ -141,6 +141,7 @@ body {
     .contact__form {
       display: flex;
       flex-direction: column;
+      width: 70%;
       gap: 1.5rem;
       color: $text-color;
       font-weight: 600;
@@ -250,11 +251,32 @@ body {
       display: flex;
       flex-direction: row;
       gap: 4rem;
-      padding: 2rem 0;
-      font-size: 1.5rem;
+      margin-top: 8rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+
+      & a {
+        text-align: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+
+        & a:hover{
+          box-shadow: 0 4px  4px  rgba(0, 0, 0, .1),
+          0 1px  6px  rgba(0, 0, 0, .05),
+          0 8px  8px  rgba(0, 0, 0, .1), 
+          0 16px 16px rgba(0, 0, 0, .1), 
+          8px 32px 32px rgba(0, 0, 0, .15), 
+          8px 64px 64px rgba(0, 0, 0, .15);
+          
+          transform: scale(1.05) translateY(-0.5rem);
+          }
+        }
     }
     
-  }
+  
 
   
 .aside__item--active {
