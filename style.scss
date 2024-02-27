@@ -68,7 +68,7 @@ body {
 
 .layout__main {
   // border: 3px solid red;
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 0 1.5rem;
   
   .main__img {
@@ -137,7 +137,11 @@ body {
   }
 
   
-
+.aside__item--active {
+  color: #EC8B5E;
+  font-weight: 600;
+  
+}
 
 
  
