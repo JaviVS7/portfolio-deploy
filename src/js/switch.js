@@ -22,8 +22,8 @@ export default function setupTheme(btn) {
       $btnSwitch.classList.add('active');  
      }   
      else {
-       $d.body.classList.remuve('dark');
-       $btnSwitch.classList.remuve('active');
+       $d.body.classList.remove('dark');
+       $btnSwitch.classList.remove('active');
      }
 
   

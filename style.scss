@@ -22,7 +22,9 @@ $span-color: #F3A950;
 $element__color: #d3d3d3;
 $selection-color: #EC8B5E;
 $selection-dk-color:#6ce2ff;
+$selection-dk-color-alpha:rgba(107, 225, 255, 0.5);
 $contact-color: #f5f0dc;
+$contact-color-alpha: rgba(250, 240, 220, 0.6);
 
 $night-color: #00203f;
 $transparent-color: transparent;
@@ -171,10 +173,18 @@ body {
         outline: none;
         box-shadow: 0.5rem 0.5rem 1rem -0.8rem rgba(0, 0, 0, 0.15);
         background-color: transparent;
-        
+                
+        &[required]:valid {
+          border: 2px solid #2BAE66;
+        }
+
+        body.dark &[required]:valid {
+          border: 2px solid #2BAE66;
+        }
+
         
         &:focus {
-          border: 2px solid $selection-color;
+          border: 2px solid rgba(100, 100, 100, 0.5);
         }
 
         &:focus ~ label,
@@ -183,14 +193,11 @@ body {
           left: 0;
           z-index: 999;
           font-size: 0.8rem;
-          color: $selection-color;
+          // color: rgba(100, 100, 100, 0.8);
           
-
-            body.dark &{
-              color: $selection-dk-color;
-            }
         }
 
+        
         &::-webkit-input-placeholder {
           color: transparent;
         }
@@ -199,9 +206,9 @@ body {
         }
 
         body.dark & {
-          border: 2px solid $text-dk-color;
+          border: 2px solid $contact-color-alpha;
           &:focus {
-            border: 2px solid $selection-dk-color;
+            border: 2px solid mediumslateblue;
 
           }
         }
@@ -217,6 +224,7 @@ body {
         pointer-events: none;
 
       }
+
     }
 
     .form__input--textarea {
@@ -248,17 +256,36 @@ body {
           background-color: $text-dk-color;
           color: $text-color;
         }
-
       }
+
+      
     }
 
+    .formErr {      
+      color: #990011;
+      font-size: 0.6rem;
+
+      &.is-active {
+        display: block;
+      }
+
+      body.dark &{
+        color: #f95700;
+      }
+    }
+   
+    
+
+
+
+   
     // SOCIAL BAR
     
     .menu__social {
       display: flex;
       flex-direction: row;
       gap: 4rem;
-      margin-top: 8rem;
+      padding-top: 5rem;
       margin-bottom: 2rem;
       font-size: 2rem;
 
@@ -283,25 +310,25 @@ body {
         }
     }
     
+    .footer__copy-right {
+      padding-bottom: 1rem;
+    }
   
 
   
 .aside__item--active {
   color: $selection-color;
-  font-weight: 600;
-  
+  font-weight: 600;  
 }
 
 
- 
+.none {
+  display: none;
+}
 
-
-
-
-
-
-
-
+.block {
+  display: block;
+}
 
 .span-color {
   color:$span-color
