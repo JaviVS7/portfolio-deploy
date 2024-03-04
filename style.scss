@@ -22,6 +22,7 @@ $span-color: #F3A950;
 $element__color: #d3d3d3;
 $selection-color: #EC8B5E;
 $selection-dk-color:#6ce2ff;
+$contact-color: #f5f0dc;
 
 $night-color: #00203f;
 $transparent-color: transparent;
@@ -135,19 +136,26 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  padding-top: 2rem;
+
+ 
   
     .contact__form {
       display: flex;
       flex-direction: column;
-      width: 80%;
+      width: 85%;
       gap: 1.5rem;
       color: $text-color;
-      font-weight: 600;
-
+      font-weight: 500;
+      background-color: $contact-color ;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.3) 0px 2px 16px 0px;
         body.dark & {
           color: $text-dk-color;
+          background-color: transparent;
+          box-shadow: rgba(0, 0, 0, 0.31) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.15) -3px -3px 6px 1px inset;
         }
     }
 
@@ -176,7 +184,7 @@ body {
           z-index: 999;
           font-size: 0.8rem;
           color: $selection-color;
-          opacity: 1;
+          
 
             body.dark &{
               color: $selection-dk-color;
@@ -205,7 +213,7 @@ body {
         top: 0.65rem;
         left: 0.65rem;
         z-index: 1;
-        transition: all 200ms ease-in-out;
+        transition: all 200ms ease;
         pointer-events: none;
 
       }
@@ -226,7 +234,7 @@ body {
       border-radius: 0.3rem;
       box-shadow: 0 0.5rem 1rem -0.8rem rgba(0, 0, 0, 0.5);
       cursor: pointer;
-      transition: all 200ms ease-in-out;
+      transition: all 200ms ease;
       
       &:hover {
         background-color: $text-color;
