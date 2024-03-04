@@ -22,9 +22,11 @@ export default function setupTheme(btn) {
       $btnSwitch.classList.add('active');  
      }   
      else {
-       $d.body.classList.remove('dark');
-       $btnSwitch.classList.remove('active');
+       $d.body.classList.remuve('dark');
+       $btnSwitch.classList.remuve('active');
      }
+
+  
   };
 
   
