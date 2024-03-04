@@ -112,6 +112,8 @@
                 name="name"
                 class="form__input"
                 placeholder="Name"
+                title="Example: John Smith"
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
                 required
               />
               <label for="name" class="form__label">Name</label>
@@ -122,15 +124,19 @@
                 name="email"
                 class="form__input"
                 placeholder="E-mail"
+                title="Example: john@dev.com"
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
                 required
               />
-              <label for="email" class="form__label">E-mail</label>
+              <label for="email" class="form__label">e-mail</label>
             </div>     
             <div class="form__group">
               <textarea
                 name="message"
                 class="form__input form__input--textarea"
                 placeholder="Message"
+                title="No more than 255 characters"
+                pattern ="^.{1,255}$"
                 required
               ></textarea>
               <label for="message" class="form__label">Message</label>
