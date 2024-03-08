@@ -5,22 +5,26 @@ $switch-bgdk-color: #603F83;
 
 .header__container {
     display: flex;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.2rem;
     // border: 1px solid white;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 0.8rem;
+    margin-top: 0.80rem;
+    padding-right: 0.5rem;
+    
 
     .header__logo a {
         position: relative;
-        top: -.25rem;
-        font-size: 1.5rem;
-        font-weight: 600;
+        top: -.1rem;
+        // font-size: 1.5rem;
+        font-weight: 500;
         .slash {
             position: relative;
-            top: .2rem;
-            left: .3rem;
-            font-size: 2.1rem ;
-            font-weight: 600;
+            top: .15rem;
+            left: .7rem;
+            font-size: 1.5rem ;
+            font-weight: 500;
             
         }        
     }
@@ -28,11 +32,11 @@ $switch-bgdk-color: #603F83;
     .nav__item-group {
         display: flex;
         align-items: center;
-        gap: 1.3rem;
+        gap: 1rem;
     }
     .nav__item {
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 1.25rem;
+        font-weight: 400;
     }
     .nav__item-hide {
         display: none;
@@ -42,8 +46,9 @@ $switch-bgdk-color: #603F83;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 3rem;
+        width: 2.5rem;
         height: 100%;
+        font-size: 0.8rem;
         position: relative;
         top: 0rem;
         background-color: $switch-bgdk-color;
@@ -57,11 +62,11 @@ $switch-bgdk-color: #603F83;
         &::before{
             content: "";
             // display: block;
-            width: 1.1rem;
-            height: 1.1rem;
+            width: 1rem;
+            height: 1rem;
             position: absolute;
-            top: 0.25remrem;
-            left: 0.25rem;
+            top: 0.10rem;
+            left: 0.2rem;
             // right: unset;
             border-radius: 50%;
             background-color: white;
@@ -73,7 +78,7 @@ $switch-bgdk-color: #603F83;
             background-color: $switch-bg-color;
 
             &::before {
-                transform: translateX(135%);                
+                transform: translateX(110%);                
             }
         }
 
@@ -86,6 +91,23 @@ $switch-bgdk-color: #603F83;
     }
 
 
+    // -------------------- RESPONSIVE --------------------
+    
+    @media screen and (min-width: 768px) {
+    
+        .nav__item-group {
+          gap: 2rem;
+    
+          .nav__item {
+            font-size: 1.1rem;
+            font-weight: 500;      
+            }       
+        }
+        .nav__item-hide {
+            display: block;
+        }
+        
+    }
+    
+    
 }
-
-

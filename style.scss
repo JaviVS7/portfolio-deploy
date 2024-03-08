@@ -3,6 +3,7 @@
 @import url(./src/css/navbar.scss);
 @import url(./src/css/menu.scss);
 
+
 // variables
 $main-color: #F4EFEA;
 $main-dk-color: rgba(51, 27, 63, 0.8);
@@ -10,7 +11,7 @@ $main-dk-color: rgba(51, 27, 63, 0.8);
 $second-color: rgba(215, 196, 158, 0.45);
 $second-dk-color: #343148;
 
-$third-color: #fafae1;
+$third-color: #F5F0DC;
 $third-dk-color: #2d2d46;
 
 $text-color: #603F83;
@@ -23,7 +24,6 @@ $element__color: #d3d3d3;
 $selection-color: #EC8B5E;
 $selection-dk-color:#6ce2ff;
 $selection-dk-color-alpha:rgba(107, 225, 255, 0.5);
-$contact-color: #f5f0dc;
 $contact-color-alpha: rgba(250, 240, 220, 0.6);
 
 $night-color: #00203f;
@@ -31,6 +31,7 @@ $transparent-color: transparent;
 // ------------------------------------------------------------------------------------------------
 
 body {
+
   background-color: $main-color;
   transition: background-color .5s ease;
   color: $text-color;
@@ -45,7 +46,7 @@ body {
   flex-direction: column;
   position: relative;
   max-width: 1440px;
-  min-height: 0px;
+  // min-height: 0px;
   // height: 100vh;
   // height: -webkit-fill-available;
   // overflow-x: hidden;
@@ -73,15 +74,16 @@ body {
 
 .layout__main {
   // border: 3px solid red;
+  width: 100%;
   margin-top: 3rem;
   padding: 0 1.5rem;
   
-  .main__img {
-    width: 90%;
-    // margin: 0 auto;
-  }
   .main__header {
     margin-top: 2rem;
+  }
+  .main__img {
+    width: 100%;
+    // margin: 0 auto;
   }
   .main__text {
     font-size: 1.5rem;
@@ -115,16 +117,17 @@ body {
   }
   .about__text-container {
     margin-top: 0.8rem;
-    text-align: justify;
+    text-align: left;
+    font-size: 1rem;
   }
 
   .about__img {
-    width: 85%;
+    max-width: 100%;
     margin: 1rem auto;
   }
 
   .about__resume{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 1rem auto;
   }
 }
@@ -147,7 +150,7 @@ body {
       gap: 1.5rem;
       color: $text-color;
       font-weight: 500;
-      background-color: $contact-color ;
+      background-color: $third-color ;
       padding: 1.5rem;
       margin-top: 2rem;
       border-radius: 10px;
@@ -182,7 +185,7 @@ body {
 
         
         &:focus {
-          border: 2px solid rgba(100, 100, 100, 0.5);
+          border: 2px solid rgba(130, 130, 100, 0.7);
         }
 
         &:focus ~ label,
@@ -340,9 +343,83 @@ body {
 
 
 
+// -------------------------------------RESPONSIVE MOBILE FIRST---------------------
 
 
 
+/* Estilos para dispositivos con pantalla de 768px o más */
+@media screen and (min-width: 768px) {
+
+  .header__container {
+    justify-content: space-between;
+    padding: 0 2.5rem;
+
+  }
+
+
+  .main__container {
+    margin-top: 1.5rem;
+    .main__img {
+      width: 70%;
+      margin: 0 auto;
+    }
+   .main__description {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+
+      .main__header {
+        margin-top: 1rem;
+      }
+      .main__text {
+        font-size: 1.8rem;
+      }
+   }
+  }
+
+  .layout__about {
+
+    padding: 2rem 2.5rem;
+
+    .about__title {
+      font-size: 3rem;
+    }
+    
+    .about__text {
+      font-size: 1.4rem;        
+  }
+  
+  .about__img {
+    width: 70%;
+    margin: 2rem auto;   
+  }
+
+  .about__resume {
+    font-size: 1.8rem;
+    // text-align: center;
+  }
+  }
+
+  .layout__footer {
+
+    .form__title {
+      font-size: 3rem;
+    }
+
+    .contact__form {
+      width: 60%;
+    }
+
+  }
+
+}
+
+/* Estilos para dispositivos con pantalla de 1200px o más */
+@media screen and (min-width: 1200px) {
+  body {
+    color: lightpink;
+  }
+}
 
 
 
