@@ -45,7 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 1440px;
+  max-width: 100%;
   // min-height: 0px;
   // height: 100vh;
   // height: -webkit-fill-available;
@@ -350,32 +350,40 @@ body {
 /* Estilos para dispositivos con pantalla de 768px o más */
 @media screen and (min-width: 768px) {
 
-  .header__container {
-    justify-content: space-between;
+  
+  .layout__header {
     padding: 0 2.5rem;
 
-  }
-
-
-  .main__container {
-    margin-top: 1.5rem;
-    .main__img {
-      width: 70%;
-      margin: 0 auto;
+    .header__container {
+      justify-content: space-between;
     }
-   .main__description {
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 2.5rem;
 
-      .main__header {
-        margin-top: 1rem;
-      }
-      .main__text {
-        font-size: 1.8rem;
-      }
-   }
   }
+
+  .layout__main {
+    margin-top: 3.5rem;
+    
+    .main__container {
+      .main__img {
+        width: 70%;
+        margin: 0 auto;
+      }
+     .main__description {
+      width: 75%;
+      margin: 0 auto;
+      margin-top: 2.5rem;
+  
+        .main__header {
+          margin-top: 1rem;
+        }
+        .main__text {
+          font-size: 1.8rem;
+        }
+     }
+    }
+
+  }
+
 
   .layout__about {
 
@@ -415,10 +423,86 @@ body {
 }
 
 /* Estilos para dispositivos con pantalla de 1200px o más */
+
 @media screen and (min-width: 1200px) {
-  body {
-    color: lightpink;
+  
+  .layout__header {
+    // margin-top: 1rem;
+    padding: 0 5rem;
+
+    .header__container {
+      justify-content: space-between;
+    }
+
   }
+
+  .layout__main {
+    padding: 0 6rem;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+
+    .main__container {
+      display: flex;
+      gap: 5rem;
+      
+      .main__img {
+        width: 50%;
+      }
+
+     .main__description {
+      width: 50%;
+      margin-top: 2.5rem;
+  
+        .main__header {
+          margin-top: 1rem;
+        }
+        .main__title {
+          font-size: 2.5rem;
+        }
+        .main__text {
+          font-size: 2.2rem;
+        }
+     }
+    }
+
+  }
+
+
+  .layout__about {
+
+    padding: 2rem 2.5rem;
+
+    .about__title {
+      font-size: 3rem;
+    }
+    
+    .about__text {
+      font-size: 1.4rem;        
+  }
+  
+  .about__img {
+    width: 70%;
+    margin: 2rem auto;   
+  }
+
+  .about__resume {
+    font-size: 1.8rem;
+    // text-align: center;
+  }
+  }
+
+  .layout__footer {
+
+    .form__title {
+      font-size: 3rem;
+    }
+
+    .contact__form {
+      width: 60%;
+    }
+
+  }
+
 }
 
 

@@ -11,7 +11,7 @@ $switch-bgdk-color: #603F83;
     justify-content: space-between;
     align-items: center;
     margin-top: 0.80rem;
-    padding-right: 0.5rem;
+    padding-right: 0.55rem;
     
 
     .header__logo a {
@@ -41,7 +41,7 @@ $switch-bgdk-color: #603F83;
     .nav__item-hide {
         display: none;
     }
-// ------------------------SWITCH-----------------------------
+// --------------------------------SWITCH-----------------------------
     .nav__switch-btn {
         display: flex;
         justify-content: space-around;
@@ -85,9 +85,6 @@ $switch-bgdk-color: #603F83;
         i{
             margin: 0.2rem;
         }
-
-        
-
     }
 
 
@@ -109,5 +106,64 @@ $switch-bgdk-color: #603F83;
         
     }
     
+
+    @media screen and (min-width: 1200px) {
     
-}
+        .nav__item-group {
+          gap: 2.5rem;
+    
+          .nav__item {
+            font-size: 1.6rem;
+            font-weight: 500;
+            &:hover {
+                text-decoration: overline;
+                
+                
+            }
+             }
+        }       
+        
+        #switch {
+            margin-left: 2.2rem;
+            width: 3.5rem;
+            height: 100%;
+            font-size: 1.2rem;
+    
+            &::before{
+                content: "";
+                width: 1.3rem;
+                height: 1.3rem;
+                top: 0.15rem;
+                left: 0.3rem;
+            }
+            &.active {
+                background-color: $switch-bg-color;
+                
+                &::before {
+                    transform: translateX(130%);                
+                }
+            }
+        } 
+
+        .header__logo a {
+            position: relative;
+            top: 0.1rem;
+            font-size: 2.5rem;
+            font-weight: 500;
+            .slash {
+                position: relative;
+                top: .15rem;
+                left: 1.5rem;
+                font-size: 3.5rem ;
+                font-weight: 500;
+                
+            }        
+        }
+
+        
+    
+        
+    }
+}   
+    
+
